@@ -1,3 +1,37 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+# Godot-specific folders
+.import/
+.export/
+.cache/
+
+# Godot-generated files
+*.import
+*.converted.scn
+
+# macOS system files
+.DS_Store
+
+# Exported builds
+/bin/
+*.exe
+*.apk
+*.pck
+*.zip
+
+# VS Code settings (optional, if you're using VS Code)
+.vscode/
+
+# Backup files
+*.tmp
+*.bak
+*.old
+*.orig
+
+# Godot environment config (optional – keep if project-specific settings matter)
+# Uncomment if you want to ignore editor-specific config
+# .godot/
+
+# Godot lock files (optional, safe to ignore)
+*.godot_lock
