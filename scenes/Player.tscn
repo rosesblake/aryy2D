@@ -1,22 +1,79 @@
-[gd_scene load_steps=3 format=3 uid="uid://jhh725o0ff0y"]
+[gd_scene load_steps=11 format=3 uid="uid://jhh725o0ff0y"]
 
 [ext_resource type="Script" uid="uid://cvt7jnuxjxben" path="res://scenes/player.gd" id="1_p0vlq"]
+[ext_resource type="Texture2D" uid="uid://d3xi5faogfs2x" path="res://who-are-you-art/piskel1-still1.png" id="2_3li8b"]
+[ext_resource type="Texture2D" uid="uid://cpk2u233r086d" path="res://who-are-you-art/New Piskel (7) (1).png" id="2_v6fml"]
+[ext_resource type="Texture2D" uid="uid://doq0x28bnkvhq" path="res://who-are-you-art/piskel1-idle2.png" id="3_khinc"]
+[ext_resource type="Texture2D" uid="uid://ctptxl186di33" path="res://who-are-you-art/HORN running frame 1 - 128.png" id="4_bruh7"]
+[ext_resource type="Texture2D" uid="uid://dcxo62rwq5fdg" path="res://who-are-you-art/HORN running frame 2 - 128.png" id="5_6eyey"]
+[ext_resource type="Texture2D" uid="uid://2m5sx2xq0odg" path="res://who-are-you-art/HORN running frame 3 - 128.png" id="6_d3wef"]
+[ext_resource type="Texture2D" uid="uid://b5anxltl62tyt" path="res://who-are-you-art/HORN running frame 4 - 128.png" id="7_o4126"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lkdrv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3li8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_khinc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bruh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6eyey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d3wef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_o4126")
+}],
+"loop": true,
+"name": &"run",
+"speed": 6.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h3rb2"]
-size = Vector2(64, 64.0234)
+size = Vector2(27.5, 57)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_p0vlq")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5, -32)
+sprite_frames = SubResource("SpriteFrames_lkdrv")
+animation = &"run"
+frame_progress = 0.149258
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -32.0
 offset_top = -64.0
 offset_right = 32.0
 color = Color(0, 0.780392, 0.262745, 1)
 metadata/_edit_use_anchors_ = true
 
+[node name="Piskel1-still1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-5, -32)
+texture = ExtResource("2_3li8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -32)
+scale = Vector2(2, 2)
+texture = ExtResource("2_v6fml")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -31.9883)
+position = Vector2(0, -32)
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_h3rb2")
 
 [node name="Camera2D" type="Camera2D" parent="."]

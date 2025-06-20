@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc0fc5w3gyw2s"]
+
+[ext_resource type="Texture2D" uid="uid://b1rxhmcic3vm1" path="res://who-are-you-art/way-bg.png" id="1_1niro"]
+
+[node name="Background1" type="Node2D"]
+
+[node name="Way-bg3" type="Sprite2D" parent="."]
+position = Vector2(-3191, 313)
+texture = ExtResource("1_1niro")
+
+[node name="Way-bg" type="Sprite2D" parent="."]
+position = Vector2(2800, 313)
+texture = ExtResource("1_1niro")
+
+[node name="Way-bg2" type="Sprite2D" parent="."]
+position = Vector2(8790, 313)
+texture = ExtResource("1_1niro")

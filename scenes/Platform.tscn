@@ -1,16 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://djdhgltgtkjbs"]
+[gd_scene load_steps=3 format=3 uid="uid://djdhgltgtkjbs"]
+
+[ext_resource type="Texture2D" uid="uid://c7ixnq3qcpq3t" path="res://who-are-you-art/who-are-you-platform.png" id="1_axdvg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orc8j"]
-size = Vector2(39.9, 3)
+size = Vector2(39.9, 8)
 
 [node name="Platform" type="StaticBody2D"]
 
+[node name="Who-are-you-platform" type="Sprite2D" parent="."]
+position = Vector2(96, 24)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_axdvg")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 200.0
 offset_bottom = 15.0
 color = Color(0.701759, 0.705528, 0.697325, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(100.25, 7.5)
+position = Vector2(100.25, 20)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_orc8j")

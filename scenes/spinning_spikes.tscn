@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7g5n56xngqvs"]
+
+[ext_resource type="Script" uid="uid://dnvx26w7kcbhl" path="res://spinning_spikes.gd" id="1_4mfbq"]
+[ext_resource type="PackedScene" uid="uid://dx8js73ek6jqd" path="res://scenes/spikes.tscn" id="2_w8pe5"]
+
+[node name="SpinningSpikes" type="Node2D"]
+position = Vector2(-28, -54)
+script = ExtResource("1_4mfbq")
+
+[node name="Rotator" type="Node2D" parent="."]
+
+[node name="SpikeFloor" parent="Rotator" instance=ExtResource("2_w8pe5")]
+
+[node name="SpikeFloor2" parent="Rotator" instance=ExtResource("2_w8pe5")]
+position = Vector2(57, 110)
+rotation = -3.14159
+
+[node name="SpikeFloor3" parent="Rotator" instance=ExtResource("2_w8pe5")]
+position = Vector2(-27, 84)
+rotation = -1.5708
+
+[node name="SpikeFloor4" parent="Rotator" instance=ExtResource("2_w8pe5")]
+position = Vector2(84, 26)
+rotation = 1.5708

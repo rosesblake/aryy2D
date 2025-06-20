@@ -5,6 +5,7 @@
 [node name="Ground" type="StaticBody2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -6002.0
 offset_top = -400.0
 offset_right = 5973.0

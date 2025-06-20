@@ -1,39 +1,55 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8e5dt4kf6tv"]
+[gd_scene load_steps=11 format=3 uid="uid://c8e5dt4kf6tv"]
 
 [ext_resource type="Script" uid="uid://cjlfs7xgt24tu" path="res://scenes/score.gd" id="1_dw26h"]
 [ext_resource type="PackedScene" uid="uid://bd7x6t7wng1a4" path="res://scenes/Ground.tscn" id="2_lrl65"]
 [ext_resource type="PackedScene" uid="uid://jhh725o0ff0y" path="res://scenes/Player.tscn" id="3_76388"]
 [ext_resource type="PackedScene" uid="uid://4hbvck0o6edb" path="res://scenes/Orb.tscn" id="4_svatc"]
 [ext_resource type="PackedScene" uid="uid://djdhgltgtkjbs" path="res://scenes/Platform.tscn" id="5_lrl65"]
+[ext_resource type="PackedScene" uid="uid://d0p2eu2cwvs8p" path="res://scenes/portal_1.tscn" id="5_n34uq"]
 [ext_resource type="PackedScene" uid="uid://dx8js73ek6jqd" path="res://scenes/spikes.tscn" id="6_76388"]
+[ext_resource type="PackedScene" uid="uid://cplivs5dyfra" path="res://scenes/Wall.tscn" id="7_svatc"]
+[ext_resource type="PackedScene" uid="uid://dc0fc5w3gyw2s" path="res://scenes/background_1.tscn" id="8_ecr63"]
+[ext_resource type="PackedScene" uid="uid://b7g5n56xngqvs" path="res://scenes/spinning_spikes.tscn" id="9_kbo48"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_dw26h")
 
+[node name="Background1" parent="." instance=ExtResource("8_ecr63")]
+position = Vector2(175, -506)
+
 [node name="Ground" parent="." instance=ExtResource("2_lrl65")]
-position = Vector2(0, 950)
+position = Vector2(5000, 950)
+
+[node name="Portal1" parent="." instance=ExtResource("5_n34uq")]
+position = Vector2(5000, 480)
 
 [node name="Player" parent="." instance=ExtResource("3_76388")]
-position = Vector2(50, 100)
+position = Vector2(85, 273)
 slide_on_ceiling = false
 
 [node name="SkullOrb" parent="." instance=ExtResource("4_svatc")]
-position = Vector2(500, 450)
+position = Vector2(500, 385)
 
 [node name="SkullOrb2" parent="." instance=ExtResource("4_svatc")]
-position = Vector2(1000, 450)
+position = Vector2(1000, 385)
 
 [node name="SkullOrb3" parent="." instance=ExtResource("4_svatc")]
-position = Vector2(1500, 450)
+position = Vector2(1500, 385)
 
 [node name="SkullOrb4" parent="." instance=ExtResource("4_svatc")]
-position = Vector2(2165, 400)
+position = Vector2(2619, 279)
 
 [node name="SkullOrb5" parent="." instance=ExtResource("4_svatc")]
-position = Vector2(2554, 336)
+position = Vector2(3689, 268)
+
+[node name="SkullOrb7" parent="." instance=ExtResource("4_svatc")]
+position = Vector2(3949, 46)
+
+[node name="SkullOrb8" parent="." instance=ExtResource("4_svatc")]
+position = Vector2(4448, -77)
 
 [node name="SkullOrb6" parent="." instance=ExtResource("4_svatc")]
-position = Vector2(2912, 205)
+position = Vector2(3218, 142)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -44,25 +60,52 @@ offset_right = 111.0
 offset_bottom = 48.0
 theme_override_font_sizes/font_size = 100
 text = "0"
+metadata/_edit_use_anchors_ = true
 
 [node name="Platform" parent="." instance=ExtResource("5_lrl65")]
-position = Vector2(1900, 490)
+position = Vector2(1900, 470)
 
 [node name="Platform2" parent="." instance=ExtResource("5_lrl65")]
-position = Vector2(2255, 455)
+position = Vector2(2248, 377)
 
 [node name="Platform4" parent="." instance=ExtResource("5_lrl65")]
-position = Vector2(2270, 335)
+position = Vector2(3586, 360)
+
+[node name="Platform7" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(3956, 463)
+
+[node name="Platform8" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(4331, 335)
+
+[node name="Platform10" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(4531, 350)
+rotation = 1.5708
+
+[node name="Platform6" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(4012, 171)
 
 [node name="Platform5" parent="." instance=ExtResource("5_lrl65")]
-position = Vector2(2648, 286)
+position = Vector2(2807, 269)
 
 [node name="Platform3" parent="." instance=ExtResource("5_lrl65")]
-position = Vector2(2600, 400)
+position = Vector2(2597, 340)
+scale = Vector2(0.3, 1)
+
+[node name="Platform9" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(4425, 6)
 scale = Vector2(0.3, 1)
 
 [node name="SpikeFloor" parent="." instance=ExtResource("6_76388")]
-position = Vector2(3100, 530)
+position = Vector2(3250, 530)
+
+[node name="SpinningSpikes" parent="." instance=ExtResource("9_kbo48")]
+position = Vector2(4636, 84)
 
 [node name="SpikeFloor2" parent="." instance=ExtResource("6_76388")]
 position = Vector2(1470, 530)
+
+[node name="Wall" parent="." instance=ExtResource("7_svatc")]
+position = Vector2(-100, 0)
+
+[node name="Wall2" parent="." instance=ExtResource("7_svatc")]
+position = Vector2(8141, -8)
