@@ -37,19 +37,25 @@ position = Vector2(1000, 385)
 position = Vector2(1500, 385)
 
 [node name="SkullOrb4" parent="." instance=ExtResource("4_svatc")]
-position = Vector2(2619, 279)
+position = Vector2(2617, 229)
 
 [node name="SkullOrb5" parent="." instance=ExtResource("4_svatc")]
 position = Vector2(3689, 268)
 
 [node name="SkullOrb7" parent="." instance=ExtResource("4_svatc")]
-position = Vector2(3949, 46)
+position = Vector2(3732, -51)
+
+[node name="SkullOrb9" parent="." instance=ExtResource("4_svatc")]
+position = Vector2(3974, -506)
+
+[node name="SkullOrb10" parent="." instance=ExtResource("4_svatc")]
+position = Vector2(4708, -399)
 
 [node name="SkullOrb8" parent="." instance=ExtResource("4_svatc")]
-position = Vector2(4448, -77)
+position = Vector2(4287, -580)
 
 [node name="SkullOrb6" parent="." instance=ExtResource("4_svatc")]
-position = Vector2(3218, 142)
+position = Vector2(3207, 162)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -75,31 +81,59 @@ position = Vector2(3586, 360)
 position = Vector2(3956, 463)
 
 [node name="Platform8" parent="." instance=ExtResource("5_lrl65")]
-position = Vector2(4331, 335)
+position = Vector2(4679, 314)
 
-[node name="Platform10" parent="." instance=ExtResource("5_lrl65")]
-position = Vector2(4531, 350)
+[node name="Platform11" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(4880, 350)
 rotation = 1.5708
 
 [node name="Platform6" parent="." instance=ExtResource("5_lrl65")]
-position = Vector2(4012, 171)
+position = Vector2(3936, 171)
+
+[node name="Platform10" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(3467, 26)
+
+[node name="Platform12" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(4706, 57)
+rotation = -1.5708
+
+[node name="Platform14" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(4039, -252)
+
+[node name="Platform15" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(3801, -423)
+
+[node name="Platform16" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(4324, -273)
+rotation = -1.5708
+
+[node name="Platform17" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(4368, -313)
 
 [node name="Platform5" parent="." instance=ExtResource("5_lrl65")]
-position = Vector2(2807, 269)
+position = Vector2(2839, 246)
 
 [node name="Platform3" parent="." instance=ExtResource("5_lrl65")]
-position = Vector2(2597, 340)
+position = Vector2(2590, 298)
 scale = Vector2(0.3, 1)
 
-[node name="Platform9" parent="." instance=ExtResource("5_lrl65")]
-position = Vector2(4425, 6)
+[node name="Platform13" parent="." instance=ExtResource("5_lrl65")]
+position = Vector2(3816, -163)
 scale = Vector2(0.3, 1)
 
 [node name="SpikeFloor" parent="." instance=ExtResource("6_76388")]
-position = Vector2(3250, 530)
+position = Vector2(3303, 530)
+
+[node name="SpikeFloor3" parent="." instance=ExtResource("6_76388")]
+position = Vector2(4685, 44)
+rotation = -1.5708
+
+[node name="SpikeFloor4" parent="." instance=ExtResource("6_76388")]
+position = Vector2(4686, -75)
+rotation = -1.5708
 
 [node name="SpinningSpikes" parent="." instance=ExtResource("9_kbo48")]
-position = Vector2(4636, 84)
+position = Vector2(4676, -299)
 
 [node name="SpikeFloor2" parent="." instance=ExtResource("6_76388")]
 position = Vector2(1470, 530)
