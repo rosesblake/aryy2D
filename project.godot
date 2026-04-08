@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="AryyGame"
-run/main_scene="uid://c8e5dt4kf6tv"
+run/main_scene="uid://c6t7rfe3nfc0g"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Game="*res://Scripts/Game.gd"
 
 [global_group]
 

@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkhw2pcsexar7"]
+
+[ext_resource type="Texture2D" uid="uid://cc4hs5dg8rwp3" path="res://login-art/login background.png" id="1_8w7ao"]
+[ext_resource type="Texture2D" uid="uid://8jaqnd4fawwp" path="res://replay-art/expanded background replay.png" id="1_mcx8e"]
+[ext_resource type="Texture2D" uid="uid://c3usbpobxuf5" path="res://scratched-disk-art/expanded background scratched disk.png" id="2_sutrc"]
+[ext_resource type="Texture2D" uid="uid://cdnldb8ptahrj" path="res://pay-2-win-art/expanded background pay2win.png" id="3_u3r4h"]
+[ext_resource type="Texture2D" uid="uid://b1rxhmcic3vm1" path="res://who-are-you-art/way-bg.png" id="4_3gi3g"]
+
+[node name="Background1" type="Node2D"]
+
+[node name="LoginBackground" type="Sprite2D" parent="."]
+position = Vector2(0, 313)
+texture = ExtResource("1_8w7ao")
+
+[node name="ExpandedBackgroundScratchedDisk" type="Sprite2D" parent="."]
+position = Vector2(3200, 313)
+texture = ExtResource("2_sutrc")
+
+[node name="ExpandedBackgroundScratchedDisk2" type="Sprite2D" parent="."]
+position = Vector2(-3000, 313)
+texture = ExtResource("2_sutrc")
+
+[node name="ExpandedBackgroundPay2Win" type="Sprite2D" parent="."]
+position = Vector2(3400, 313)
+texture = ExtResource("3_u3r4h")
+
+[node name="ExpandedBackgroundPay2Win2" type="Sprite2D" parent="."]
+position = Vector2(-3200, 313)
+texture = ExtResource("3_u3r4h")
+
+[node name="Way-bg2" type="Sprite2D" parent="."]
+position = Vector2(3600, 313)
+texture = ExtResource("4_3gi3g")
+
+[node name="Way-bg3" type="Sprite2D" parent="."]
+position = Vector2(-3400, 313)
+texture = ExtResource("4_3gi3g")
+
+[node name="Way-bg" type="Sprite2D" parent="."]
+position = Vector2(3800, 310)
+texture = ExtResource("1_mcx8e")
+
+[node name="Way-bg4" type="Sprite2D" parent="."]
+position = Vector2(-3600, 310)
+texture = ExtResource("1_mcx8e")
+
+[node name="LoginBackground3" type="Sprite2D" parent="."]
+position = Vector2(-3800, 313)
+texture = ExtResource("1_8w7ao")
+
+[node name="LoginBackground2" type="Sprite2D" parent="."]
+position = Vector2(4000, 313)
+texture = ExtResource("1_8w7ao")
+
+[node name="ExpandedBackgroundScratchedDisk3" type="Sprite2D" parent="."]
+position = Vector2(4200, 313)
+texture = ExtResource("2_sutrc")
+
+[node name="ExpandedBackgroundPay2Win3" type="Sprite2D" parent="."]
+position = Vector2(4400, 313)
+texture = ExtResource("3_u3r4h")
+
+[node name="Way-bg5" type="Sprite2D" parent="."]
+position = Vector2(4600, 313)
+texture = ExtResource("4_3gi3g")
+
+[node name="Way-bg6" type="Sprite2D" parent="."]
+position = Vector2(4800, 310)
+texture = ExtResource("1_mcx8e")
+
+[node name="ref" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2800, 313)
+texture = ExtResource("1_mcx8e")

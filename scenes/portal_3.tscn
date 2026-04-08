@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://b51ldt0ddsdu8"]
+
+[ext_resource type="Texture2D" uid="uid://dis75do7768p3" path="res://scratched-disk-art/portal scratched disk frame 1- 128.png" id="1_54x4y"]
+[ext_resource type="Texture2D" uid="uid://dts17u18ws4kr" path="res://scratched-disk-art/portal scratched disk frame 2 - 128.png" id="2_bmm5s"]
+[ext_resource type="Texture2D" uid="uid://djijbghpd2cck" path="res://scratched-disk-art/portal scratched disk frame 3 - 128.png" id="3_ve3k5"]
+[ext_resource type="Texture2D" uid="uid://bfcfl0nq1maxm" path="res://scratched-disk-art/portal scratched disk frame 4 - 128.png.png" id="4_54x4y"]
+[ext_resource type="Script" uid="uid://bagp17k4nwa8o" path="res://scenes/portal1.gd" id="5_nkhkl"]
+[ext_resource type="Script" uid="uid://bx73lxm35qom4" path="res://scenes/portal3.gd" id="6_bmm5s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mm8qr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_54x4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bmm5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ve3k5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_54x4y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ve3k5"]
+size = Vector2(48, 97)
+
+[node name="Portal1" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mm8qr")
+animation = &"idle"
+script = ExtResource("5_nkhkl")
+
+[node name="Portal-frame-1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_54x4y")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("6_bmm5s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ve3k5")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

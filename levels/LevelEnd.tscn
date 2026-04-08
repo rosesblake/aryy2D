@@ -1,0 +1,137 @@
+[gd_scene load_steps=11 format=3 uid="uid://bbsleh5ty52gt"]
+
+[ext_resource type="PackedScene" uid="uid://bkhw2pcsexar7" path="res://scenes/background_LevelEnd.tscn" id="2_hu3ij"]
+[ext_resource type="PackedScene" uid="uid://bd7x6t7wng1a4" path="res://scenes/Ground.tscn" id="3_y5c3s"]
+[ext_resource type="PackedScene" uid="uid://x5p4mft0pi7y" path="res://scenes/Player5.tscn" id="5_1cmrd"]
+[ext_resource type="PackedScene" uid="uid://bq38r6tab2tsi" path="res://scenes/Player2.tscn" id="5_50713"]
+[ext_resource type="PackedScene" uid="uid://jhh725o0ff0y" path="res://scenes/Player.tscn" id="5_xj5fi"]
+[ext_resource type="PackedScene" uid="uid://boln5f5tmqj84" path="res://scenes/Player3.tscn" id="6_t0xls"]
+[ext_resource type="PackedScene" uid="uid://br40frw0e3kmb" path="res://scenes/Player4.tscn" id="7_jv04j"]
+[ext_resource type="PackedScene" uid="uid://cplivs5dyfra" path="res://scenes/Wall.tscn" id="10_lourw"]
+[ext_resource type="Script" uid="uid://b4ahr66vteaj8" path="res://levels/youwonlabel.gd" id="10_t0xls"]
+
+[sub_resource type="GDScript" id="GDScript_50713"]
+script/source = "extends CharacterBody2D
+
+@onready var sprite = $AnimatedSprite2D
+
+func _physics_process(delta: float) -> void:
+	sprite.play(\"idle\")
+"
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background1" parent="." instance=ExtResource("2_hu3ij")]
+position = Vector2(-50, -506)
+
+[node name="Ground" parent="." instance=ExtResource("3_y5c3s")]
+position = Vector2(5000, 950)
+
+[node name="Wall" parent="." instance=ExtResource("10_lourw")]
+position = Vector2(-6, -160)
+
+[node name="Wall2" parent="." instance=ExtResource("10_lourw")]
+position = Vector2(4274, -239)
+
+[node name="Player" parent="." instance=ExtResource("5_50713")]
+position = Vector2(60, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player12" parent="." instance=ExtResource("5_50713")]
+position = Vector2(-922, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player2" parent="." instance=ExtResource("6_t0xls")]
+position = Vector2(249, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player6" parent="." instance=ExtResource("6_t0xls")]
+position = Vector2(-150, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player3" parent="." instance=ExtResource("7_jv04j")]
+position = Vector2(453, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player7" parent="." instance=ExtResource("7_jv04j")]
+position = Vector2(-339, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player4" parent="." instance=ExtResource("5_1cmrd")]
+position = Vector2(852, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player8" parent="." instance=ExtResource("5_1cmrd")]
+position = Vector2(-743, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player5" parent="." instance=ExtResource("5_xj5fi")]
+position = Vector2(655, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player9" parent="." instance=ExtResource("5_xj5fi")]
+position = Vector2(-547, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player11" parent="." instance=ExtResource("6_t0xls")]
+position = Vector2(1270, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player13" parent="." instance=ExtResource("7_jv04j")]
+position = Vector2(1469, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player15" parent="." instance=ExtResource("5_1cmrd")]
+position = Vector2(1854, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player17" parent="." instance=ExtResource("5_xj5fi")]
+position = Vector2(1667, 525)
+script = SubResource("GDScript_50713")
+
+[node name="Player10" parent="." instance=ExtResource("5_50713")]
+position = Vector2(1057, 525)
+script = SubResource("GDScript_50713")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -648.5
+offset_top = -150.0
+offset_right = 648.5
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 500
+text = "YOU WON"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("10_t0xls")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -648.5
+offset_top = 225.0
+offset_right = 648.5
+offset_bottom = 259.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer2/CenterContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 40
+text = "Press any button to continue"
+horizontal_alignment = 1
+vertical_alignment = 1

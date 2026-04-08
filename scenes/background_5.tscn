@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvrktsj18najc"]
+
+[ext_resource type="Texture2D" uid="uid://8jaqnd4fawwp" path="res://replay-art/expanded background replay.png" id="1_mkire"]
+
+[node name="Background1" type="Node2D"]
+
+[node name="Way-bg3" type="Sprite2D" parent="."]
+position = Vector2(-3191, 313)
+texture = ExtResource("1_mkire")
+
+[node name="Way-bg" type="Sprite2D" parent="."]
+position = Vector2(2800, 313)
+texture = ExtResource("1_mkire")
+
+[node name="Way-bg2" type="Sprite2D" parent="."]
+position = Vector2(8790, 313)
+texture = ExtResource("1_mkire")
+
+[node name="Way-bg4" type="Sprite2D" parent="."]
+position = Vector2(-3191, -2687)
+rotation = 3.14159
+texture = ExtResource("1_mkire")
+
+[node name="Way-bg5" type="Sprite2D" parent="."]
+position = Vector2(2800, -2687)
+rotation = 3.14159
+texture = ExtResource("1_mkire")
+
+[node name="Way-bg6" type="Sprite2D" parent="."]
+position = Vector2(8790, -2687)
+rotation = 3.14159
+texture = ExtResource("1_mkire")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://04qluxtob2np"]
+
+[ext_resource type="Texture2D" uid="uid://c3usbpobxuf5" path="res://scratched-disk-art/expanded background scratched disk.png" id="1_e45hv"]
+
+[node name="Background1" type="Node2D"]
+
+[node name="Way-bg3" type="Sprite2D" parent="."]
+position = Vector2(-3191, 313)
+texture = ExtResource("1_e45hv")
+
+[node name="Way-bg" type="Sprite2D" parent="."]
+position = Vector2(2800, 313)
+texture = ExtResource("1_e45hv")
+
+[node name="Way-bg2" type="Sprite2D" parent="."]
+position = Vector2(8790, 313)
+texture = ExtResource("1_e45hv")
+
+[node name="Way-bg4" type="Sprite2D" parent="."]
+position = Vector2(-3191, -2687)
+texture = ExtResource("1_e45hv")
+flip_v = true
+
+[node name="Way-bg5" type="Sprite2D" parent="."]
+position = Vector2(2800, -2687)
+texture = ExtResource("1_e45hv")
+flip_v = true
+
+[node name="Way-bg6" type="Sprite2D" parent="."]
+position = Vector2(8790, -2687)
+texture = ExtResource("1_e45hv")
+flip_v = true

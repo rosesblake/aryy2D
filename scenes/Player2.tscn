@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3 uid="uid://bq38r6tab2tsi"]
+
+[ext_resource type="Script" uid="uid://cvt7jnuxjxben" path="res://scenes/player.gd" id="1_u3gjl"]
+[ext_resource type="Texture2D" uid="uid://ctyin0x2jmkj6" path="res://login-art/idle frame 1 - 128.png" id="2_y5wyn"]
+[ext_resource type="Texture2D" uid="uid://qwsc64cy54pk" path="res://login-art/idle frame 2 - 128.png" id="3_u3gjl"]
+[ext_resource type="Texture2D" uid="uid://dlx3yahqoikg8" path="res://login-art/login running frame 1 - 128.png" id="4_a1ruj"]
+[ext_resource type="Texture2D" uid="uid://dsixyo86i2rqp" path="res://login-art/login running frame 2 - 128.png" id="5_6rnxb"]
+[ext_resource type="Texture2D" uid="uid://cw14wauxtw66l" path="res://login-art/login running frame 3 - 128.png" id="6_21jxl"]
+[ext_resource type="Texture2D" uid="uid://dmw3a6h76e80q" path="res://login-art/login running frame 4 - 128.png" id="7_5r00m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lkdrv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y5wyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u3gjl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a1ruj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6rnxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_21jxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5r00m")
+}],
+"loop": true,
+"name": &"run",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3rb2"]
+size = Vector2(27.5, 57)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_u3gjl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["player"]]
+position = Vector2(-5, -32)
+sprite_frames = SubResource("SpriteFrames_lkdrv")
+animation = &"run"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -32.0
+offset_top = -64.0
+offset_right = 32.0
+color = Color(0, 0.780392, 0.262745, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Piskel1-still1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-5, -32)
+texture = ExtResource("2_y5wyn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -32)
+scale = Vector2(2, 2)
+texture = ExtResource("3_u3gjl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -32)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_h3rb2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(400, -150)

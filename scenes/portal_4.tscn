@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://cc2vp155jjdgw"]
+
+[ext_resource type="Texture2D" uid="uid://dfe5qlak2wdmx" path="res://pay-2-win-art/portal pw2 frame 1 - 128.png" id="1_l6ewh"]
+[ext_resource type="Texture2D" uid="uid://cgk6k7c5buj6m" path="res://pay-2-win-art/portal pw2 frame 2 - 128.png" id="2_3ldbn"]
+[ext_resource type="Texture2D" uid="uid://r75wlnb4bnrg" path="res://pay-2-win-art/portal pw2 frame 3 - 128.png" id="3_366sh"]
+[ext_resource type="Texture2D" uid="uid://csft1uheqgssj" path="res://pay-2-win-art/portal pw2 frame 4 - 128.png" id="4_mhx33"]
+[ext_resource type="Script" uid="uid://bagp17k4nwa8o" path="res://scenes/portal1.gd" id="5_mhx33"]
+[ext_resource type="Script" uid="uid://2hsvorq7xgu0" path="res://scenes/portal4.gd" id="6_l6ewh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mm8qr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l6ewh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3ldbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_366sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mhx33")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ldbn"]
+size = Vector2(48, 97)
+
+[node name="Portal1" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mm8qr")
+animation = &"idle"
+script = ExtResource("5_mhx33")
+
+[node name="Portal-frame-1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_l6ewh")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("6_l6ewh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_3ldbn")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

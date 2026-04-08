@@ -15,3 +15,18 @@ texture = ExtResource("1_1niro")
 [node name="Way-bg2" type="Sprite2D" parent="."]
 position = Vector2(8790, 313)
 texture = ExtResource("1_1niro")
+
+[node name="Way-bg4" type="Sprite2D" parent="."]
+position = Vector2(-3191, -2687)
+rotation = 3.14159
+texture = ExtResource("1_1niro")
+
+[node name="Way-bg5" type="Sprite2D" parent="."]
+position = Vector2(2800, -2687)
+rotation = 3.14159
+texture = ExtResource("1_1niro")
+
+[node name="Way-bg6" type="Sprite2D" parent="."]
+position = Vector2(8790, -2687)
+rotation = 3.14159
+texture = ExtResource("1_1niro")

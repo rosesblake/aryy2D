@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3 uid="uid://br40frw0e3kmb"]
+
+[ext_resource type="Script" uid="uid://cvt7jnuxjxben" path="res://scenes/player.gd" id="1_jccbx"]
+[ext_resource type="Texture2D" uid="uid://bgsqowlie63kl" path="res://pay-2-win-art/p2w idle frame 1 - 128.png" id="2_jccbx"]
+[ext_resource type="Texture2D" uid="uid://lr0q1xt06ee8" path="res://pay-2-win-art/p2w idle frame 2 - 128.png" id="3_eplb2"]
+[ext_resource type="Texture2D" uid="uid://dpd3bkr5qhkeh" path="res://pay-2-win-art/pay2win running frame 1 - 128.png" id="4_oi5o7"]
+[ext_resource type="Texture2D" uid="uid://bthfgvcmfhdvv" path="res://pay-2-win-art/pay2win running frame 2 - 128.png" id="5_bkfbw"]
+[ext_resource type="Texture2D" uid="uid://c4u5b5hylum7k" path="res://pay-2-win-art/pay2win running frames 3 - 128.png" id="6_jccbx"]
+[ext_resource type="Texture2D" uid="uid://dss08grinrcqr" path="res://pay-2-win-art/pay2win running frame 4 - 128.png" id="7_0ykcr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lkdrv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jccbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eplb2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_oi5o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bkfbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jccbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0ykcr")
+}],
+"loop": true,
+"name": &"run",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3rb2"]
+size = Vector2(27.5, 57)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_jccbx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5, -32)
+sprite_frames = SubResource("SpriteFrames_lkdrv")
+animation = &"run"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -32.0
+offset_top = -64.0
+offset_right = 32.0
+color = Color(0, 0.780392, 0.262745, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Piskel1-still1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-5, -32)
+texture = ExtResource("2_jccbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -32)
+scale = Vector2(2, 2)
+texture = ExtResource("3_eplb2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -32)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_h3rb2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(400, -150)

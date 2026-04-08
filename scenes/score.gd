@@ -1,7 +1,10 @@
 extends Node2D
 
-var score = 0
+func _ready():
+	Game.current_level_path = scene_file_path
+	Game.reset_level_score()
+	$CanvasLayer/Label.text = "%d" % Game.total_score
+	$Music.play()
 
-func add_point():
-	score += 1
-	$CanvasLayer/Label.text = "%d" % score
+func _process(_delta):
+	$CanvasLayer/Label.text = "%d" % Game.total_score
