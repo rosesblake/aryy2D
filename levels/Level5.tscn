@@ -31,13 +31,13 @@ position = Vector2(5767, 314)
 position = Vector2(5417, 412)
 
 [node name="SkullOrb2" parent="." instance=ExtResource("6_l0dh8")]
-position = Vector2(4850, 225)
+position = Vector2(4860, 203)
 
 [node name="SkullOrb3" parent="." instance=ExtResource("6_l0dh8")]
 position = Vector2(4376, 15)
 
 [node name="SkullOrb5" parent="." instance=ExtResource("6_l0dh8")]
-position = Vector2(4180, 123)
+position = Vector2(4178, 133)
 
 [node name="SkullOrb6" parent="." instance=ExtResource("6_l0dh8")]
 position = Vector2(3295, 305)
@@ -91,6 +91,10 @@ position = Vector2(4765, 464)
 
 [node name="Platform21" parent="." instance=ExtResource("7_d523w")]
 position = Vector2(3556, 471)
+
+[node name="Platform96" parent="." instance=ExtResource("7_d523w")]
+position = Vector2(3818, 291)
+scale = Vector2(0.2, 1)
 
 [node name="Platform22" parent="." instance=ExtResource("7_d523w")]
 position = Vector2(3194, 378)
@@ -351,23 +355,19 @@ position = Vector2(-98, -1678)
 rotation = 1.5708
 
 [node name="Platform2" parent="." instance=ExtResource("7_d523w")]
-position = Vector2(4799, 260)
+position = Vector2(4807, 238)
 scale = Vector2(0.5, 1)
 
 [node name="Platform3" parent="." instance=ExtResource("7_d523w")]
-position = Vector2(4530, 358)
+position = Vector2(4518, 344)
 scale = Vector2(0.5, 1)
 
 [node name="Platform10" parent="." instance=ExtResource("7_d523w")]
 position = Vector2(4343, 471)
 scale = Vector2(0.2, 1)
 
-[node name="Platform14" parent="." instance=ExtResource("7_d523w")]
-position = Vector2(4139, 309)
-scale = Vector2(0.2, 1)
-
 [node name="Platform4" parent="." instance=ExtResource("7_d523w")]
-position = Vector2(4570, 146)
+position = Vector2(4575, 109)
 scale = Vector2(0.5, 1)
 
 [node name="Platform9" parent="." instance=ExtResource("7_d523w")]
@@ -375,15 +375,15 @@ position = Vector2(4343, 54)
 scale = Vector2(0.3, 1)
 
 [node name="Platform12" parent="." instance=ExtResource("7_d523w")]
-position = Vector2(4222, 190)
+position = Vector2(4221, 212)
 scale = Vector2(0.4, 1)
 
 [node name="Platform11" parent="." instance=ExtResource("7_d523w")]
-position = Vector2(4601, -67)
+position = Vector2(4693, -101)
 scale = Vector2(0.7, 1)
 
 [node name="Platform13" parent="." instance=ExtResource("7_d523w")]
-position = Vector2(4432, -204)
+position = Vector2(4464, -230)
 scale = Vector2(0.3, 1)
 
 [node name="Platform18" parent="." instance=ExtResource("7_d523w")]
@@ -455,14 +455,14 @@ position = Vector2(2763, -1013)
 position = Vector2(5010, 535)
 
 [node name="SpikeFloor6" parent="." instance=ExtResource("8_k6i8e")]
-position = Vector2(4878, 326)
+position = Vector2(4886, 304)
 rotation = 3.14159
 
 [node name="SpikeFloor7" parent="." instance=ExtResource("8_k6i8e")]
 position = Vector2(4687, 534)
 
 [node name="SpikeFloor8" parent="." instance=ExtResource("8_k6i8e")]
-position = Vector2(4235, 169)
+position = Vector2(4234, 191)
 
 [node name="SpikeFloor11" parent="." instance=ExtResource("8_k6i8e")]
 position = Vector2(2900, -1032)

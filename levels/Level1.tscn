@@ -68,16 +68,16 @@ position = Vector2(4239, -1637)
 position = Vector2(4834, -1855)
 
 [node name="SkullOrb15" parent="." instance=ExtResource("6_rv5to")]
-position = Vector2(5013, -1637)
+position = Vector2(5042, -1629)
 
 [node name="SkullOrb16" parent="." instance=ExtResource("6_rv5to")]
-position = Vector2(5011, -1088)
+position = Vector2(4982, -1088)
 
 [node name="SkullOrb17" parent="." instance=ExtResource("6_rv5to")]
-position = Vector2(5018, -625)
+position = Vector2(5052, -630)
 
 [node name="SkullOrb18" parent="." instance=ExtResource("6_rv5to")]
-position = Vector2(5014, -94)
+position = Vector2(4961, -118)
 
 [node name="SkullOrb6" parent="." instance=ExtResource("6_rv5to")]
 position = Vector2(3207, 162)
@@ -289,11 +289,11 @@ position = Vector2(4552, -633)
 scale = Vector2(0.5, 1)
 
 [node name="Platform46" parent="." instance=ExtResource("7_j4mar")]
-position = Vector2(4818, -1021)
+position = Vector2(4818, -998)
 scale = Vector2(0.3, 1)
 
 [node name="Platform56" parent="." instance=ExtResource("7_j4mar")]
-position = Vector2(4818, -1221)
+position = Vector2(4820, -1171)
 scale = Vector2(0.3, 1)
 
 [node name="Platform45" parent="." instance=ExtResource("7_j4mar")]
