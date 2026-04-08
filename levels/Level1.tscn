@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8e5dt4kf6tv"]
+[gd_scene load_steps=12 format=3 uid="uid://c8e5dt4kf6tv"]
 
 [ext_resource type="Script" uid="uid://cjlfs7xgt24tu" path="res://scenes/score.gd" id="1_vcl05"]
 [ext_resource type="PackedScene" uid="uid://dc0fc5w3gyw2s" path="res://scenes/background_1.tscn" id="2_nn0v1"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dx8js73ek6jqd" path="res://scenes/spikes.tscn" id="8_1bxb8"]
 [ext_resource type="PackedScene" uid="uid://b7g5n56xngqvs" path="res://scenes/spinning_spikes.tscn" id="9_6gurj"]
 [ext_resource type="PackedScene" uid="uid://cplivs5dyfra" path="res://scenes/Wall.tscn" id="10_0bnej"]
+[ext_resource type="AudioStream" uid="uid://f6kfpgx66rqp" path="res://Music/who are you.wav" id="11_nn0v1"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_vcl05")
@@ -338,3 +339,6 @@ position = Vector2(-100, 0)
 
 [node name="Wall2" parent="." instance=ExtResource("10_0bnej")]
 position = Vector2(9962, -226)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_nn0v1")
