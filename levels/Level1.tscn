@@ -340,5 +340,5 @@ position = Vector2(-100, 0)
 [node name="Wall2" parent="." instance=ExtResource("10_0bnej")]
 position = Vector2(9962, -226)
 
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_nn0v1")

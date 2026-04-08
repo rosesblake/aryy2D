@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ilei5khjcb3s"]
+[gd_scene load_steps=12 format=3 uid="uid://5iptygaqdacq"]
 
 [ext_resource type="Script" uid="uid://cjlfs7xgt24tu" path="res://scenes/score.gd" id="1_rop0j"]
 [ext_resource type="PackedScene" uid="uid://cvrktsj18najc" path="res://scenes/background_5.tscn" id="2_8ln3t"]
@@ -567,5 +567,5 @@ position = Vector2(-100, -180)
 [node name="Wall2" parent="." instance=ExtResource("10_vej6f")]
 position = Vector2(8938, -176)
 
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_8ln3t")
