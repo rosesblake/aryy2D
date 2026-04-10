@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bbsleh5ty52gt"]
+[gd_scene load_steps=12 format=3 uid="uid://bbsleh5ty52gt"]
 
 [ext_resource type="PackedScene" uid="uid://bkhw2pcsexar7" path="res://scenes/background_LevelEnd.tscn" id="2_hu3ij"]
 [ext_resource type="PackedScene" uid="uid://bd7x6t7wng1a4" path="res://scenes/Ground.tscn" id="3_y5c3s"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://jhh725o0ff0y" path="res://scenes/Player.tscn" id="5_xj5fi"]
 [ext_resource type="PackedScene" uid="uid://boln5f5tmqj84" path="res://scenes/Player3.tscn" id="6_t0xls"]
 [ext_resource type="PackedScene" uid="uid://br40frw0e3kmb" path="res://scenes/Player4.tscn" id="7_jv04j"]
+[ext_resource type="Script" uid="uid://dh06ja5txluov" path="res://levels/total_score.gd" id="10_jv04j"]
 [ext_resource type="PackedScene" uid="uid://cplivs5dyfra" path="res://scenes/Wall.tscn" id="10_lourw"]
 [ext_resource type="Script" uid="uid://b4ahr66vteaj8" path="res://levels/youwonlabel.gd" id="10_t0xls"]
 
@@ -122,9 +123,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -648.5
-offset_top = 225.0
+offset_top = 250.0
 offset_right = 648.5
-offset_bottom = 259.0
+offset_bottom = 284.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -133,5 +134,26 @@ layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 40
 text = "Press any button to continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+script = ExtResource("10_jv04j")
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer3"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -648.0
+offset_top = 200.0
+offset_right = 649.0
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer3/CenterContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
