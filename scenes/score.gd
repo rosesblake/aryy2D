@@ -45,8 +45,8 @@ func _on_jump_pressed():
 	player.press_jump()
 
 func _handle_mobile_controls():
-	var is_mobile = OS.get_name() == "Android" or OS.get_name() == "iOS"
-	
+	var is_mobile = DisplayServer.is_touchscreen_available()
+
 	if not is_mobile:
 		if has_node("Mobile"):
 			$Mobile.visible = false
@@ -54,13 +54,12 @@ func _handle_mobile_controls():
 			$RotateOverlay.visible = false
 		return
 
-	var size = get_viewport_rect().size
-	var is_landscape = size.x > size.y
+	# removed landscape check
 
 	if has_node("Mobile"):
-		$Mobile.visible = is_landscape
+		$Mobile.visible = true
 	if has_node("RotateOverlay"):
-		$RotateOverlay.visible = not is_landscape
+		$RotateOverlay.visible = false
 	
 func _notification(what):
 	if what == NOTIFICATION_WM_SIZE_CHANGED:

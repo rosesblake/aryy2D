@@ -30,6 +30,7 @@ position = Vector2(10901, -200)
 [node name="UI" type="Node2D" parent="."]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="UI"]
+visible = false
 
 [node name="CenterContainer" type="CenterContainer" parent="UI/CanvasLayer2"]
 anchors_preset = 15
@@ -62,3 +63,4 @@ layout_mode = 2
 theme_type_variation = &"FlatButton"
 theme_override_font_sizes/font_size = 150
 text = "START GAME"
+flat = true
