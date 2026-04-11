@@ -10,5 +10,4 @@ func _on_continue_pressed():
 
 func go_to_site():
 	continue_button.disabled = true
-	await get_tree().create_timer(0.2).timeout
 	OS.shell_open("https://aryyzona.com/home")

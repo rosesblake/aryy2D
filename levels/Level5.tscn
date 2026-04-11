@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://5iptygaqdacq"]
+[gd_scene load_steps=17 format=3 uid="uid://5iptygaqdacq"]
 
 [ext_resource type="Script" uid="uid://cjlfs7xgt24tu" path="res://scenes/score.gd" id="1_rop0j"]
 [ext_resource type="PackedScene" uid="uid://cvrktsj18najc" path="res://scenes/background_5.tscn" id="2_8ln3t"]
@@ -11,6 +11,56 @@
 [ext_resource type="PackedScene" uid="uid://b7g5n56xngqvs" path="res://scenes/spinning_spikes.tscn" id="9_bf3ww"]
 [ext_resource type="PackedScene" uid="uid://cplivs5dyfra" path="res://scenes/Wall.tscn" id="10_vej6f"]
 [ext_resource type="AudioStream" uid="uid://bqmf0e3emtpxh" path="res://Music/Replay Mixinprog2.3.wav" id="11_8ln3t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln3t"]
+bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.70173, 0.70173, 0.70173, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2v8bv"]
+bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.67069, 0.67069, 0.67069, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hkux"]
+bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.728822, 0.728822, 0.728822, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4x3wk"]
+bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.753984, 0.753984, 0.753984, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l0dh8"]
+bg_color = Color(1, 1, 1, 0.243137)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.737193, 0.737193, 0.737193, 0.6)
+shadow_size = 3
+shadow_offset = Vector2(2, 2)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_rop0j")
@@ -569,3 +619,60 @@ position = Vector2(8938, -176)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_8ln3t")
+
+[node name="Mobile" type="CanvasLayer" parent="."]
+
+[node name="LeftButton" type="Button" parent="Mobile"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -452.0
+offset_top = -150.0
+offset_right = -252.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxFlat_8ln3t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2v8bv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4hkux")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4x3wk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l0dh8")
+text = "←"
+
+[node name="RightButton" type="Button" parent="Mobile"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -150.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxFlat_8ln3t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2v8bv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4hkux")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4x3wk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l0dh8")
+text = "→"
+
+[node name="JumpButton" type="Button" parent="Mobile"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+offset_right = 200.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+theme_override_styles/focus = SubResource("StyleBoxFlat_8ln3t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2v8bv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4hkux")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4x3wk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l0dh8")
+text = "▲"

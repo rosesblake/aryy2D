@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://j1fdawd70uuo"]
+[gd_scene load_steps=17 format=3 uid="uid://j1fdawd70uuo"]
 
 [ext_resource type="Script" uid="uid://cjlfs7xgt24tu" path="res://scenes/score.gd" id="1_a84uq"]
 [ext_resource type="PackedScene" uid="uid://cehtao2fbg3do" path="res://scenes/background_4.tscn" id="2_4pch3"]
@@ -12,6 +12,56 @@
 [ext_resource type="PackedScene" uid="uid://cplivs5dyfra" path="res://scenes/Wall.tscn" id="10_dyigy"]
 [ext_resource type="AudioStream" uid="uid://deujfomv1qe5u" path="res://Music/Pay2Win Master1.wav" id="11_4pch3"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pch3"]
+bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.70173, 0.70173, 0.70173, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yisop"]
+bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.67069, 0.67069, 0.67069, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6eg67"]
+bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.728822, 0.728822, 0.728822, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nurn8"]
+bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.753984, 0.753984, 0.753984, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mcv5s"]
+bg_color = Color(1, 1, 1, 0.243137)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.737193, 0.737193, 0.737193, 0.6)
+shadow_size = 3
+shadow_offset = Vector2(2, 2)
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_a84uq")
 
@@ -24,7 +74,7 @@ position = Vector2(5000, 950)
 [node name="Portal1" parent="." instance=ExtResource("4_6eg67")]
 position = Vector2(5311, 59)
 
-[node name="Player2" parent="." instance=ExtResource("5_nurn8")]
+[node name="Player" parent="." instance=ExtResource("5_nurn8")]
 position = Vector2(453, -550)
 
 [node name="p2wOrb" parent="." instance=ExtResource("6_mcv5s")]
@@ -280,3 +330,60 @@ position = Vector2(8938, -176)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_4pch3")
+
+[node name="Mobile" type="CanvasLayer" parent="."]
+
+[node name="LeftButton" type="Button" parent="Mobile"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -452.0
+offset_top = -150.0
+offset_right = -252.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxFlat_4pch3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_yisop")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6eg67")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nurn8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mcv5s")
+text = "←"
+
+[node name="RightButton" type="Button" parent="Mobile"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -150.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxFlat_4pch3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_yisop")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6eg67")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nurn8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mcv5s")
+text = "→"
+
+[node name="JumpButton" type="Button" parent="Mobile"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+offset_right = 200.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+theme_override_styles/focus = SubResource("StyleBoxFlat_4pch3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_yisop")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6eg67")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nurn8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mcv5s")
+text = "▲"
