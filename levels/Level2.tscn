@@ -89,8 +89,8 @@ slide_on_ceiling = false
 [node name="HeartOrb" parent="." instance=ExtResource("6_605o7")]
 position = Vector2(494, 388)
 
-[node name="HeartOrb2" parent="." instance=ExtResource("6_605o7")]
-position = Vector2(1422, 432)
+[node name="HeartOrb2" parent="HeartOrb" instance=ExtResource("6_605o7")]
+position = Vector2(928, 44)
 
 [node name="HeartOrb4" parent="." instance=ExtResource("6_605o7")]
 position = Vector2(2091, -365)
@@ -448,13 +448,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_p5th2")
 icon = ExtResource("14_pb71r")
 icon_alignment = 1
 
-[node name="LeftTouch" type="TouchScreenButton" parent="Mobile"]
-position = Vector2(572, 462)
-scale = Vector2(1.2, 1.2)
-texture_normal = ExtResource("12_605o7")
-action = "ui_left"
-visibility_mode = 1
-
 [node name="RightTouch" type="TouchScreenButton" parent="Mobile"]
 position = Vector2(872, 462)
 scale = Vector2(1.2, 1.2)
@@ -467,6 +460,27 @@ position = Vector2(121, 462)
 scale = Vector2(1.2, 1.2)
 texture_normal = ExtResource("14_pb71r")
 action = "ui_accept"
+visibility_mode = 1
+
+[node name="Control" type="Control" parent="Mobile"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -662.0
+offset_top = -233.0
+offset_right = -529.0
+offset_bottom = -114.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="LeftTouch" type="TouchScreenButton" parent="Mobile/Control"]
+position = Vector2(82, 47)
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("12_605o7")
+action = "ui_left"
 visibility_mode = 1
 
 [node name="RestartCanvas" type="CanvasLayer" parent="."]
