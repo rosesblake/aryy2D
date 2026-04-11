@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c6t7rfe3nfc0g"]
+[gd_scene load_steps=21 format=3 uid="uid://c6t7rfe3nfc0g"]
 
 [ext_resource type="Script" uid="uid://cjlfs7xgt24tu" path="res://scenes/score.gd" id="1_5pn2a"]
 [ext_resource type="PackedScene" uid="uid://bo5jo1bjcgrnj" path="res://scenes/background_2.tscn" id="2_p5th2"]
@@ -11,6 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://b7g5n56xngqvs" path="res://scenes/spinning_spikes.tscn" id="9_behg1"]
 [ext_resource type="PackedScene" uid="uid://cplivs5dyfra" path="res://scenes/Wall.tscn" id="10_gwanj"]
 [ext_resource type="AudioStream" uid="uid://btepjfpfqwe2x" path="res://Music/Login Mixinprog3.3.wav" id="11_p5th2"]
+[ext_resource type="Texture2D" uid="uid://b66xr12rmu20a" path="res://Icons/arrowLeft.png" id="12_605o7"]
+[ext_resource type="Texture2D" uid="uid://bd2hm7nilj32t" path="res://Icons/return.png" id="12_v0cbu"]
+[ext_resource type="Texture2D" uid="uid://ctpd20c5b3hm2" path="res://Icons/arrowRight.png" id="13_g6u6r"]
+[ext_resource type="Texture2D" uid="uid://bx17bktrtwyf0" path="res://Icons/arrowUp.png" id="14_pb71r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcmrh"]
 bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
@@ -385,8 +389,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -452.0
-offset_top = -150.0
-offset_right = -252.0
+offset_top = -178.0
+offset_right = -232.0
+offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -396,7 +401,8 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_v0cbu")
 theme_override_styles/hover = SubResource("StyleBoxFlat_28og2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_605o7")
 theme_override_styles/normal = SubResource("StyleBoxFlat_p5th2")
-text = "←"
+icon = ExtResource("12_605o7")
+icon_alignment = 1
 
 [node name="RightButton" type="Button" parent="Mobile"]
 anchors_preset = 3
@@ -405,7 +411,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -200.0
-offset_top = -150.0
+offset_top = -178.0
+offset_right = 20.0
+offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -415,14 +423,16 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_v0cbu")
 theme_override_styles/hover = SubResource("StyleBoxFlat_28og2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_605o7")
 theme_override_styles/normal = SubResource("StyleBoxFlat_p5th2")
-text = "→"
+icon = ExtResource("13_g6u6r")
+icon_alignment = 1
 
 [node name="JumpButton" type="Button" parent="Mobile"]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -150.0
-offset_right = 200.0
+offset_top = -178.0
+offset_right = 220.0
+offset_bottom = -8.0
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 55
@@ -431,7 +441,8 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_v0cbu")
 theme_override_styles/hover = SubResource("StyleBoxFlat_28og2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_605o7")
 theme_override_styles/normal = SubResource("StyleBoxFlat_p5th2")
-text = "▲"
+icon = ExtResource("14_pb71r")
+icon_alignment = 1
 
 [node name="RestartCanvas" type="CanvasLayer" parent="."]
 
@@ -448,5 +459,5 @@ grow_horizontal = 0
 layout_mode = 2
 theme_type_variation = &"FlatButton"
 theme_override_font_sizes/font_size = 100
-text = "↻"
+icon = ExtResource("12_v0cbu")
 flat = true
