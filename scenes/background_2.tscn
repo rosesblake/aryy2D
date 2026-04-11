@@ -18,6 +18,23 @@ position = Vector2(8790, 313)
 texture = ExtResource("1_35mhk")
 flip_h = true
 
+[node name="Way-bg7" type="Sprite2D" parent="."]
+position = Vector2(-3191, 3300)
+texture = ExtResource("1_35mhk")
+flip_h = true
+flip_v = true
+
+[node name="Way-bg8" type="Sprite2D" parent="."]
+position = Vector2(2800, 3300)
+texture = ExtResource("1_35mhk")
+flip_v = true
+
+[node name="Way-bg9" type="Sprite2D" parent="."]
+position = Vector2(8790, 3300)
+texture = ExtResource("1_35mhk")
+flip_h = true
+flip_v = true
+
 [node name="Way-bg4" type="Sprite2D" parent="."]
 position = Vector2(-3191, -2687)
 texture = ExtResource("1_35mhk")

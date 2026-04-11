@@ -30,3 +30,18 @@ texture = ExtResource("1_mkire")
 position = Vector2(8790, -2687)
 rotation = 3.14159
 texture = ExtResource("1_mkire")
+
+[node name="Way-bg7" type="Sprite2D" parent="."]
+position = Vector2(-3191, 3300)
+texture = ExtResource("1_mkire")
+flip_v = true
+
+[node name="Way-bg8" type="Sprite2D" parent="."]
+position = Vector2(2800, 3300)
+texture = ExtResource("1_mkire")
+flip_v = true
+
+[node name="Way-bg9" type="Sprite2D" parent="."]
+position = Vector2(8790, 3300)
+texture = ExtResource("1_mkire")
+flip_v = true

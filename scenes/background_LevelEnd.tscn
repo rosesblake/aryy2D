@@ -8,67 +8,152 @@
 
 [node name="Background1" type="Node2D"]
 
-[node name="LoginBackground" type="Sprite2D" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="LoginBackground" type="Sprite2D" parent="Node2D"]
 position = Vector2(0, 313)
 texture = ExtResource("1_8w7ao")
 
-[node name="ExpandedBackgroundScratchedDisk" type="Sprite2D" parent="."]
+[node name="ExpandedBackgroundScratchedDisk" type="Sprite2D" parent="Node2D"]
 position = Vector2(3200, 313)
 texture = ExtResource("2_sutrc")
 
-[node name="ExpandedBackgroundScratchedDisk2" type="Sprite2D" parent="."]
+[node name="ExpandedBackgroundScratchedDisk2" type="Sprite2D" parent="Node2D"]
 position = Vector2(-3000, 313)
 texture = ExtResource("2_sutrc")
 
-[node name="ExpandedBackgroundPay2Win" type="Sprite2D" parent="."]
+[node name="ExpandedBackgroundPay2Win" type="Sprite2D" parent="Node2D"]
 position = Vector2(3400, 313)
 texture = ExtResource("3_u3r4h")
 
-[node name="ExpandedBackgroundPay2Win2" type="Sprite2D" parent="."]
+[node name="ExpandedBackgroundPay2Win2" type="Sprite2D" parent="Node2D"]
 position = Vector2(-3200, 313)
 texture = ExtResource("3_u3r4h")
 
-[node name="Way-bg2" type="Sprite2D" parent="."]
+[node name="Way-bg2" type="Sprite2D" parent="Node2D"]
 position = Vector2(3600, 313)
 texture = ExtResource("4_3gi3g")
 
-[node name="Way-bg3" type="Sprite2D" parent="."]
+[node name="Way-bg3" type="Sprite2D" parent="Node2D"]
 position = Vector2(-3400, 313)
 texture = ExtResource("4_3gi3g")
 
-[node name="Way-bg" type="Sprite2D" parent="."]
+[node name="Way-bg" type="Sprite2D" parent="Node2D"]
 position = Vector2(3800, 310)
 texture = ExtResource("1_mcx8e")
 
-[node name="Way-bg4" type="Sprite2D" parent="."]
+[node name="Way-bg4" type="Sprite2D" parent="Node2D"]
 position = Vector2(-3600, 310)
 texture = ExtResource("1_mcx8e")
 
-[node name="LoginBackground3" type="Sprite2D" parent="."]
+[node name="LoginBackground3" type="Sprite2D" parent="Node2D"]
 position = Vector2(-3800, 313)
 texture = ExtResource("1_8w7ao")
 
-[node name="LoginBackground2" type="Sprite2D" parent="."]
+[node name="LoginBackground2" type="Sprite2D" parent="Node2D"]
 position = Vector2(4000, 313)
 texture = ExtResource("1_8w7ao")
 
-[node name="ExpandedBackgroundScratchedDisk3" type="Sprite2D" parent="."]
+[node name="ExpandedBackgroundScratchedDisk3" type="Sprite2D" parent="Node2D"]
 position = Vector2(4200, 313)
 texture = ExtResource("2_sutrc")
 
-[node name="ExpandedBackgroundPay2Win3" type="Sprite2D" parent="."]
+[node name="ExpandedBackgroundPay2Win3" type="Sprite2D" parent="Node2D"]
 position = Vector2(4400, 313)
 texture = ExtResource("3_u3r4h")
 
-[node name="Way-bg5" type="Sprite2D" parent="."]
+[node name="Way-bg5" type="Sprite2D" parent="Node2D"]
 position = Vector2(4600, 313)
 texture = ExtResource("4_3gi3g")
 
-[node name="Way-bg6" type="Sprite2D" parent="."]
+[node name="Way-bg6" type="Sprite2D" parent="Node2D"]
 position = Vector2(4800, 310)
 texture = ExtResource("1_mcx8e")
 
-[node name="ref" type="Sprite2D" parent="."]
+[node name="ref" type="Sprite2D" parent="Node2D"]
 visible = false
 position = Vector2(2800, 313)
 texture = ExtResource("1_mcx8e")
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="LoginBackground" type="Sprite2D" parent="Node2D2"]
+position = Vector2(0, 3300)
+texture = ExtResource("1_8w7ao")
+flip_v = true
+
+[node name="ExpandedBackgroundScratchedDisk" type="Sprite2D" parent="Node2D2"]
+position = Vector2(3200, 3300)
+texture = ExtResource("2_sutrc")
+flip_v = true
+
+[node name="ExpandedBackgroundScratchedDisk2" type="Sprite2D" parent="Node2D2"]
+position = Vector2(-3000, 3300)
+texture = ExtResource("2_sutrc")
+flip_v = true
+
+[node name="ExpandedBackgroundPay2Win" type="Sprite2D" parent="Node2D2"]
+position = Vector2(3400, 3300)
+texture = ExtResource("3_u3r4h")
+flip_v = true
+
+[node name="ExpandedBackgroundPay2Win2" type="Sprite2D" parent="Node2D2"]
+position = Vector2(-3200, 3300)
+texture = ExtResource("3_u3r4h")
+flip_v = true
+
+[node name="Way-bg2" type="Sprite2D" parent="Node2D2"]
+position = Vector2(3600, 3300)
+texture = ExtResource("4_3gi3g")
+flip_v = true
+
+[node name="Way-bg3" type="Sprite2D" parent="Node2D2"]
+position = Vector2(-3400, 3300)
+texture = ExtResource("4_3gi3g")
+flip_v = true
+
+[node name="Way-bg" type="Sprite2D" parent="Node2D2"]
+position = Vector2(3800, 3300)
+texture = ExtResource("1_mcx8e")
+flip_v = true
+
+[node name="Way-bg4" type="Sprite2D" parent="Node2D2"]
+position = Vector2(-3600, 3300)
+texture = ExtResource("1_mcx8e")
+flip_v = true
+
+[node name="LoginBackground3" type="Sprite2D" parent="Node2D2"]
+position = Vector2(-3800, 3300)
+texture = ExtResource("1_8w7ao")
+flip_v = true
+
+[node name="LoginBackground2" type="Sprite2D" parent="Node2D2"]
+position = Vector2(4000, 3300)
+texture = ExtResource("1_8w7ao")
+flip_v = true
+
+[node name="ExpandedBackgroundScratchedDisk3" type="Sprite2D" parent="Node2D2"]
+position = Vector2(4200, 3300)
+texture = ExtResource("2_sutrc")
+flip_v = true
+
+[node name="ExpandedBackgroundPay2Win3" type="Sprite2D" parent="Node2D2"]
+position = Vector2(4400, 3300)
+texture = ExtResource("3_u3r4h")
+flip_v = true
+
+[node name="Way-bg5" type="Sprite2D" parent="Node2D2"]
+position = Vector2(4600, 3300)
+texture = ExtResource("4_3gi3g")
+flip_v = true
+
+[node name="Way-bg6" type="Sprite2D" parent="Node2D2"]
+position = Vector2(4800, 3300)
+texture = ExtResource("1_mcx8e")
+flip_v = true
+
+[node name="ref" type="Sprite2D" parent="Node2D2"]
+visible = false
+position = Vector2(2800, 3300)
+texture = ExtResource("1_mcx8e")
+flip_v = true
