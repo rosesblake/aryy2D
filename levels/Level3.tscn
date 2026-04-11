@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://4j26dvb4037y"]
+[gd_scene load_steps=13 format=3 uid="uid://4j26dvb4037y"]
 
 [ext_resource type="Script" uid="uid://cjlfs7xgt24tu" path="res://scenes/score.gd" id="1_oq8ku"]
 [ext_resource type="PackedScene" uid="uid://04qluxtob2np" path="res://scenes/background_3.tscn" id="2_mppvi"]
@@ -11,56 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b7g5n56xngqvs" path="res://scenes/spinning_spikes.tscn" id="9_t3rlc"]
 [ext_resource type="PackedScene" uid="uid://cplivs5dyfra" path="res://scenes/Wall.tscn" id="10_77jv8"]
 [ext_resource type="AudioStream" uid="uid://b87t3ir6l4llo" path="res://Music/ScratchedDisk Master1.wav" id="11_mppvi"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mppvi"]
-bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0.70173, 0.70173, 0.70173, 0.6)
-shadow_size = 2
-shadow_offset = Vector2(2, 2)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uog4x"]
-bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0.67069, 0.67069, 0.67069, 0.6)
-shadow_size = 2
-shadow_offset = Vector2(2, 2)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqqs4"]
-bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0.728822, 0.728822, 0.728822, 0.6)
-shadow_size = 2
-shadow_offset = Vector2(2, 2)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_52gcn"]
-bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0.753984, 0.753984, 0.753984, 0.6)
-shadow_size = 2
-shadow_offset = Vector2(2, 2)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ws61b"]
-bg_color = Color(1, 1, 1, 0.243137)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0.737193, 0.737193, 0.737193, 0.6)
-shadow_size = 3
-shadow_offset = Vector2(2, 2)
+[ext_resource type="Texture2D" uid="uid://bd2hm7nilj32t" path="res://Icons/return.png" id="12_uog4x"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_oq8ku")
@@ -321,57 +272,29 @@ stream = ExtResource("11_mppvi")
 
 [node name="Mobile" type="CanvasLayer" parent="."]
 
-[node name="LeftButton" type="Button" parent="Mobile"]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -452.0
-offset_top = -150.0
-offset_right = -252.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 75
-theme_override_styles/focus = SubResource("StyleBoxFlat_mppvi")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uog4x")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fqqs4")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_52gcn")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ws61b")
-text = "←"
+[node name="LeftButton" type="TouchScreenButton" parent="Mobile"]
+scale = Vector2(1.2, 1.2)
 
-[node name="RightButton" type="Button" parent="Mobile"]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -200.0
-offset_top = -150.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 75
-theme_override_styles/focus = SubResource("StyleBoxFlat_mppvi")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uog4x")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fqqs4")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_52gcn")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ws61b")
-text = "→"
+[node name="RightButton" type="TouchScreenButton" parent="Mobile"]
+scale = Vector2(1.2, 1.2)
 
-[node name="JumpButton" type="Button" parent="Mobile"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -150.0
-offset_right = 200.0
-grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 55
-theme_override_styles/focus = SubResource("StyleBoxFlat_mppvi")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uog4x")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fqqs4")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_52gcn")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ws61b")
-text = "▲"
+[node name="JumpButton" type="TouchScreenButton" parent="Mobile"]
+scale = Vector2(1.2, 1.2)
+
+[node name="RestartCanvas" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="RestartCanvas"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_right = -34.0
+offset_bottom = 145.0
+grow_horizontal = 0
+
+[node name="RestartButton" type="Button" parent="RestartCanvas/CenterContainer"]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+theme_override_font_sizes/font_size = 100
+icon = ExtResource("12_uog4x")
+flat = true

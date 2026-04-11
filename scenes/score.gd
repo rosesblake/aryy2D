@@ -9,40 +9,16 @@ func _ready():
 	$CanvasLayer/Label.text = "%d" % Game.total_score
 	$Music.finished.connect(_on_music_finished)
 	$Music.play()
-	
+
 	restart_button.pressed.connect(_on_restart_pressed)
-	
+
 	_handle_mobile_controls()
-
-	if has_node("Mobile/LeftButton"):
-		$Mobile/LeftButton.button_down.connect(_on_left_pressed)
-		$Mobile/LeftButton.button_up.connect(_on_left_released)
-
-		$Mobile/RightButton.button_down.connect(_on_right_pressed)
-		$Mobile/RightButton.button_up.connect(_on_right_released)
-
-		$Mobile/JumpButton.pressed.connect(_on_jump_pressed)
 
 func _on_music_finished():
 	$Music.play()
-	
+
 func _process(_delta):
 	$CanvasLayer/Label.text = "%d" % Game.total_score
-
-func _on_left_pressed():
-	player.set_move_left_pressed(true)
-
-func _on_left_released():
-	player.set_move_left_pressed(false)
-
-func _on_right_pressed():
-	player.set_move_right_pressed(true)
-
-func _on_right_released():
-	player.set_move_right_pressed(false)
-
-func _on_jump_pressed():
-	player.press_jump()
 
 func _handle_mobile_controls():
 	var is_mobile = DisplayServer.is_touchscreen_available()
@@ -54,13 +30,11 @@ func _handle_mobile_controls():
 			$RotateOverlay.visible = false
 		return
 
-	# removed landscape check
-
 	if has_node("Mobile"):
 		$Mobile.visible = true
 	if has_node("RotateOverlay"):
 		$RotateOverlay.visible = false
-	
+
 func _notification(what):
 	if what == NOTIFICATION_WM_SIZE_CHANGED:
 		_handle_mobile_controls()

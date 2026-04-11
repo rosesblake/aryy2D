@@ -392,6 +392,7 @@ offset_bottom = -58.0
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(1.2, 1.2)
+mouse_filter = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 75
 theme_override_styles/focus = SubResource("StyleBoxFlat_xcmrh")
@@ -415,6 +416,7 @@ offset_bottom = -58.0
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(1.2, 1.2)
+mouse_filter = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 75
 theme_override_styles/focus = SubResource("StyleBoxFlat_xcmrh")
@@ -435,6 +437,7 @@ offset_right = 270.0
 offset_bottom = -58.0
 grow_vertical = 0
 scale = Vector2(1.2, 1.2)
+mouse_filter = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 55
 theme_override_styles/focus = SubResource("StyleBoxFlat_xcmrh")
@@ -444,6 +447,27 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_605o7")
 theme_override_styles/normal = SubResource("StyleBoxFlat_p5th2")
 icon = ExtResource("14_pb71r")
 icon_alignment = 1
+
+[node name="LeftTouch" type="TouchScreenButton" parent="Mobile"]
+position = Vector2(572, 462)
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("12_605o7")
+action = "ui_left"
+visibility_mode = 1
+
+[node name="RightTouch" type="TouchScreenButton" parent="Mobile"]
+position = Vector2(872, 462)
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("13_g6u6r")
+action = "ui_right"
+visibility_mode = 1
+
+[node name="JumpTouch" type="TouchScreenButton" parent="Mobile"]
+position = Vector2(121, 462)
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("14_pb71r")
+action = "ui_accept"
+visibility_mode = 1
 
 [node name="RestartCanvas" type="CanvasLayer" parent="."]
 

@@ -14,10 +14,6 @@ var max_jumps = 2
 var spawn_position: Vector2
 var death_label_instance = null
 
-var move_left_pressed = false
-var move_right_pressed = false
-var jump_pressed = false
-
 func _ready():
 	spawn_position = global_position
 
@@ -48,15 +44,6 @@ func respawn():
 		death_label_instance.queue_free()
 		death_label_instance = null
 
-func set_move_left_pressed(value: bool):
-	move_left_pressed = value
-
-func set_move_right_pressed(value: bool):
-	move_right_pressed = value
-
-func press_jump():
-	jump_pressed = true
-
 func _physics_process(delta: float) -> void:
 	if is_dead:
 		velocity.y += GRAVITY * delta
@@ -70,17 +57,15 @@ func _physics_process(delta: float) -> void:
 	else:
 		jump_count = 0
 
-	if (Input.is_action_just_pressed("ui_accept") or jump_pressed) and jump_count < max_jumps:
+	if Input.is_action_just_pressed("ui_accept") and jump_count < max_jumps:
 		velocity.y = JUMP_VELOCITY
 		jump_count += 1
 
-	jump_pressed = false
-
 	var direction = 0.0
 
-	if Input.is_action_pressed("ui_left") or move_left_pressed:
+	if Input.is_action_pressed("ui_left"):
 		direction -= 1.0
-	if Input.is_action_pressed("ui_right") or move_right_pressed:
+	if Input.is_action_pressed("ui_right"):
 		direction += 1.0
 
 	if direction != 0:
