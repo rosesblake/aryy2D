@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c6t7rfe3nfc0g"]
+[gd_scene load_steps=22 format=3 uid="uid://c6t7rfe3nfc0g"]
 
 [ext_resource type="Script" uid="uid://cjlfs7xgt24tu" path="res://scenes/score.gd" id="1_5pn2a"]
 [ext_resource type="PackedScene" uid="uid://bo5jo1bjcgrnj" path="res://scenes/background_2.tscn" id="2_p5th2"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bd2hm7nilj32t" path="res://Icons/return.png" id="12_v0cbu"]
 [ext_resource type="Texture2D" uid="uid://ctpd20c5b3hm2" path="res://Icons/arrowRight.png" id="13_g6u6r"]
 [ext_resource type="Texture2D" uid="uid://bx17bktrtwyf0" path="res://Icons/arrowUp.png" id="14_pb71r"]
+[ext_resource type="Texture2D" uid="uid://b8iwuyrs1qgsv" path="res://Icons/audioOn.png" id="16_g6u6r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcmrh"]
 bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
@@ -523,3 +524,19 @@ theme_type_variation = &"FlatButton"
 theme_override_font_sizes/font_size = 100
 icon = ExtResource("12_v0cbu")
 flat = true
+
+[node name="CenterContainer3" type="CenterContainer" parent="RestartCanvas"]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -117.0
+offset_top = 120.0
+offset_right = -17.0
+offset_bottom = 265.0
+grow_horizontal = 0
+scale = Vector2(0.5, 0.5)
+
+[node name="TextureRect" type="TextureRect" parent="RestartCanvas/CenterContainer3"]
+layout_mode = 2
+texture = ExtResource("16_g6u6r")
