@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://d20fjfclvlns3"]
+[gd_scene load_steps=10 format=3 uid="uid://d20fjfclvlns3"]
 
 [ext_resource type="Script" uid="uid://ll0ba0jkhv5j" path="res://levels/startgame.gd" id="1_k63ib"]
 [ext_resource type="PackedScene" uid="uid://bd7x6t7wng1a4" path="res://scenes/Ground.tscn" id="2_3jkuk"]
 [ext_resource type="PackedScene" uid="uid://bo5jo1bjcgrnj" path="res://scenes/background_2.tscn" id="2_47rlx"]
 [ext_resource type="PackedScene" uid="uid://cplivs5dyfra" path="res://scenes/Wall.tscn" id="3_47rlx"]
+[ext_resource type="PackedScene" uid="uid://dobkchjncxkrk" path="res://scenes/Orb2.tscn" id="6_pir3y"]
+[ext_resource type="PackedScene" uid="uid://4hbvck0o6edb" path="res://scenes/Orb.tscn" id="6_x5ghs"]
+[ext_resource type="PackedScene" uid="uid://bdwjo7fhxxt1m" path="res://scenes/Orb3.tscn" id="7_4324q"]
+[ext_resource type="PackedScene" uid="uid://boafhyg1royy6" path="res://scenes/Orb4.tscn" id="8_h7r4t"]
+[ext_resource type="PackedScene" uid="uid://bbfrx6qu3n2yj" path="res://scenes/Orb5.tscn" id="9_3jkuk"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_k63ib")
@@ -58,9 +63,169 @@ offset_right = 78.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StartButton" type="Button" parent="UI/CanvasLayer/CenterContainer"]
+[node name="Control" type="Control" parent="UI/CanvasLayer/CenterContainer"]
 layout_mode = 2
+
+[node name="StartButton" type="Button" parent="UI/CanvasLayer/CenterContainer/Control"]
+layout_mode = 2
+offset_left = -462.0
+offset_top = -107.0
+offset_right = 462.0
+offset_bottom = 106.0
 theme_type_variation = &"FlatButton"
 theme_override_font_sizes/font_size = 150
 text = "START GAME"
 flat = true
+
+[node name="SkullOrb" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("8_h7r4t")]
+position = Vector2(-208, -177)
+
+[node name="SkullOrb2" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("7_4324q")]
+position = Vector2(-486, -176)
+
+[node name="SkullOrb3" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_x5ghs")]
+position = Vector2(-274, -182)
+
+[node name="SkullOrb4" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_pir3y")]
+position = Vector2(-411, -179)
+
+[node name="SkullOrb5" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("9_3jkuk")]
+position = Vector2(-342, -178)
+
+[node name="SkullOrb6" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("8_h7r4t")]
+position = Vector2(141, -179)
+
+[node name="SkullOrb7" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("7_4324q")]
+position = Vector2(-137, -178)
+
+[node name="SkullOrb8" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_x5ghs")]
+position = Vector2(75, -184)
+
+[node name="SkullOrb9" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_pir3y")]
+position = Vector2(-62, -181)
+
+[node name="SkullOrb10" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("9_3jkuk")]
+position = Vector2(7, -180)
+
+[node name="SkullOrb11" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("8_h7r4t")]
+position = Vector2(493, -183)
+
+[node name="SkullOrb12" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("7_4324q")]
+position = Vector2(215, -182)
+
+[node name="SkullOrb13" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_x5ghs")]
+position = Vector2(427, -188)
+
+[node name="SkullOrb14" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_pir3y")]
+position = Vector2(290, -185)
+
+[node name="SkullOrb15" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("9_3jkuk")]
+position = Vector2(359, -184)
+
+[node name="SkullOrb21" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("8_h7r4t")]
+position = Vector2(-204, 186)
+rotation = -3.14159
+
+[node name="SkullOrb22" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("7_4324q")]
+position = Vector2(-482, 187)
+rotation = -3.14159
+
+[node name="SkullOrb39" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("7_4324q")]
+position = Vector2(-551, 111)
+rotation = -1.57079
+
+[node name="SkullOrb23" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_x5ghs")]
+position = Vector2(-270, 181)
+rotation = -3.14159
+
+[node name="SkullOrb24" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_pir3y")]
+position = Vector2(-407, 184)
+rotation = -3.14159
+
+[node name="SkullOrb25" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("9_3jkuk")]
+position = Vector2(-338, 185)
+rotation = -3.14159
+
+[node name="SkullOrb26" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("8_h7r4t")]
+position = Vector2(145, 184)
+rotation = -3.14159
+
+[node name="SkullOrb27" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("7_4324q")]
+position = Vector2(-133, 185)
+rotation = -3.14159
+
+[node name="SkullOrb28" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_x5ghs")]
+position = Vector2(79, 179)
+rotation = -3.14159
+
+[node name="SkullOrb29" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_pir3y")]
+position = Vector2(-58, 182)
+rotation = -3.14159
+
+[node name="SkullOrb30" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("9_3jkuk")]
+position = Vector2(11, 183)
+rotation = -3.14159
+
+[node name="SkullOrb31" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("8_h7r4t")]
+position = Vector2(497, 180)
+rotation = -3.14159
+
+[node name="SkullOrb32" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("7_4324q")]
+position = Vector2(219, 181)
+rotation = -3.14159
+
+[node name="SkullOrb33" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_x5ghs")]
+position = Vector2(431, 175)
+rotation = -3.14159
+
+[node name="SkullOrb34" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_pir3y")]
+position = Vector2(294, 178)
+rotation = -3.14159
+
+[node name="SkullOrb35" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("9_3jkuk")]
+position = Vector2(363, 179)
+rotation = -3.14159
+
+[node name="SkullOrb16" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("8_h7r4t")]
+position = Vector2(564, 107)
+rotation = 1.57079
+
+[node name="SkullOrb17" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("7_4324q")]
+position = Vector2(558, -200)
+rotation = 1.57079
+
+[node name="SkullOrb36" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("7_4324q")]
+position = Vector2(563, 189)
+rotation = 1.57079
+
+[node name="SkullOrb18" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_x5ghs")]
+position = Vector2(570, 26)
+rotation = 1.57079
+
+[node name="SkullOrb19" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_pir3y")]
+position = Vector2(563, -123)
+rotation = 1.57079
+
+[node name="SkullOrb20" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("9_3jkuk")]
+position = Vector2(559, -46)
+rotation = 1.57079
+
+[node name="SkullOrb37" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("8_h7r4t")]
+position = Vector2(-553, 201)
+rotation = -1.57079
+
+[node name="SkullOrb38" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("8_h7r4t")]
+position = Vector2(-553, -194)
+rotation = -1.57079
+
+[node name="SkullOrb40" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_x5ghs")]
+position = Vector2(-547, 35)
+rotation = -1.57079
+
+[node name="SkullOrb41" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("6_pir3y")]
+position = Vector2(-554, -114)
+rotation = -1.57079
+
+[node name="SkullOrb42" parent="UI/CanvasLayer/CenterContainer/Control" instance=ExtResource("9_3jkuk")]
+position = Vector2(-558, -37)
+rotation = -1.57079

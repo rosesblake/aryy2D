@@ -448,20 +448,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_p5th2")
 icon = ExtResource("14_pb71r")
 icon_alignment = 1
 
-[node name="RightTouch" type="TouchScreenButton" parent="Mobile"]
-position = Vector2(872, 462)
-scale = Vector2(1.2, 1.2)
-texture_normal = ExtResource("13_g6u6r")
-action = "ui_right"
-visibility_mode = 1
-
-[node name="JumpTouch" type="TouchScreenButton" parent="Mobile"]
-position = Vector2(121, 462)
-scale = Vector2(1.2, 1.2)
-texture_normal = ExtResource("14_pb71r")
-action = "ui_accept"
-visibility_mode = 1
-
 [node name="Control" type="Control" parent="Mobile"]
 layout_mode = 3
 anchors_preset = 3
@@ -481,6 +467,43 @@ position = Vector2(82, 47)
 scale = Vector2(1.2, 1.2)
 texture_normal = ExtResource("12_605o7")
 action = "ui_left"
+visibility_mode = 1
+
+[node name="Control2" type="Control" parent="Mobile"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -119.0
+offset_right = 133.0
+grow_vertical = 0
+
+[node name="JumpTouch" type="TouchScreenButton" parent="Mobile/Control2"]
+position = Vector2(122, -67)
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("14_pb71r")
+action = "ui_accept"
+visibility_mode = 1
+
+[node name="Control3" type="Control" parent="Mobile"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -662.0
+offset_top = -233.0
+offset_right = -529.0
+offset_bottom = -114.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="RightTouch" type="TouchScreenButton" parent="Mobile/Control3"]
+position = Vector2(383, 47)
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("13_g6u6r")
+action = "ui_right"
 visibility_mode = 1
 
 [node name="RestartCanvas" type="CanvasLayer" parent="."]

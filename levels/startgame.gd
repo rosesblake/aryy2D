@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var start_button = $UI/CanvasLayer/CenterContainer/StartButton
+@onready var start_button = $UI/CanvasLayer/CenterContainer/Control/StartButton
 
 func _ready():
 	start_button.pressed.connect(_on_start_pressed)

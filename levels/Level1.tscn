@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c8e5dt4kf6tv"]
+[gd_scene load_steps=21 format=3 uid="uid://c8e5dt4kf6tv"]
 
 [ext_resource type="Script" uid="uid://cjlfs7xgt24tu" path="res://scenes/score.gd" id="1_vcl05"]
 [ext_resource type="PackedScene" uid="uid://dc0fc5w3gyw2s" path="res://scenes/background_1.tscn" id="2_nn0v1"]
@@ -12,6 +12,59 @@
 [ext_resource type="PackedScene" uid="uid://cplivs5dyfra" path="res://scenes/Wall.tscn" id="10_0bnej"]
 [ext_resource type="AudioStream" uid="uid://f6kfpgx66rqp" path="res://Music/who are you.wav" id="11_nn0v1"]
 [ext_resource type="Texture2D" uid="uid://bd2hm7nilj32t" path="res://Icons/return.png" id="12_kdcll"]
+[ext_resource type="Texture2D" uid="uid://b66xr12rmu20a" path="res://Icons/arrowLeft.png" id="12_rv5to"]
+[ext_resource type="Texture2D" uid="uid://ctpd20c5b3hm2" path="res://Icons/arrowRight.png" id="13_j4mar"]
+[ext_resource type="Texture2D" uid="uid://bx17bktrtwyf0" path="res://Icons/arrowUp.png" id="14_1bxb8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6gurj"]
+bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.70173, 0.70173, 0.70173, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0bnej"]
+bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.67069, 0.67069, 0.67069, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_audcl"]
+bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.728822, 0.728822, 0.728822, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ccxey"]
+bg_color = Color(0.92549, 0.92549, 0.92549, 0.588235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.753984, 0.753984, 0.753984, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tsgrn"]
+bg_color = Color(1, 1, 1, 0.243137)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.737193, 0.737193, 0.737193, 0.6)
+shadow_size = 3
+shadow_offset = Vector2(2, 2)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_vcl05")
@@ -346,14 +399,132 @@ stream = ExtResource("11_nn0v1")
 
 [node name="Mobile" type="CanvasLayer" parent="."]
 
-[node name="LeftButton" type="TouchScreenButton" parent="Mobile"]
+[node name="LeftButton" type="Button" parent="Mobile"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -652.0
+offset_top = -228.0
+offset_right = -432.0
+offset_bottom = -58.0
+grow_horizontal = 0
+grow_vertical = 0
 scale = Vector2(1.2, 1.2)
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxFlat_6gurj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0bnej")
+theme_override_styles/hover = SubResource("StyleBoxFlat_audcl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ccxey")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tsgrn")
+icon = ExtResource("12_rv5to")
+icon_alignment = 1
 
-[node name="RightButton" type="TouchScreenButton" parent="Mobile"]
+[node name="RightButton" type="Button" parent="Mobile"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -352.0
+offset_top = -228.0
+offset_right = -132.0
+offset_bottom = -58.0
+grow_horizontal = 0
+grow_vertical = 0
 scale = Vector2(1.2, 1.2)
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxFlat_6gurj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0bnej")
+theme_override_styles/hover = SubResource("StyleBoxFlat_audcl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ccxey")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tsgrn")
+icon = ExtResource("13_j4mar")
+icon_alignment = 1
 
-[node name="JumpButton" type="TouchScreenButton" parent="Mobile"]
+[node name="JumpButton" type="Button" parent="Mobile"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -228.0
+offset_right = 270.0
+offset_bottom = -58.0
+grow_vertical = 0
 scale = Vector2(1.2, 1.2)
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+theme_override_styles/focus = SubResource("StyleBoxFlat_6gurj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0bnej")
+theme_override_styles/hover = SubResource("StyleBoxFlat_audcl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ccxey")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tsgrn")
+icon = ExtResource("14_1bxb8")
+icon_alignment = 1
+
+[node name="Control" type="Control" parent="Mobile"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -662.0
+offset_top = -233.0
+offset_right = -529.0
+offset_bottom = -114.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="LeftTouch" type="TouchScreenButton" parent="Mobile/Control"]
+position = Vector2(82, 47)
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("12_rv5to")
+action = "ui_left"
+visibility_mode = 1
+
+[node name="Control2" type="Control" parent="Mobile"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -119.0
+offset_right = 133.0
+grow_vertical = 0
+
+[node name="JumpTouch" type="TouchScreenButton" parent="Mobile/Control2"]
+position = Vector2(122, -67)
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("14_1bxb8")
+action = "ui_accept"
+visibility_mode = 1
+
+[node name="Control3" type="Control" parent="Mobile"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -662.0
+offset_top = -233.0
+offset_right = -529.0
+offset_bottom = -114.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="RightTouch" type="TouchScreenButton" parent="Mobile/Control3"]
+position = Vector2(383, 47)
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("13_j4mar")
+action = "ui_right"
+visibility_mode = 1
 
 [node name="RestartCanvas" type="CanvasLayer" parent="."]
 
