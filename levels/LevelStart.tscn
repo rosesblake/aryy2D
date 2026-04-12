@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://d20fjfclvlns3"]
+[gd_scene load_steps=11 format=3 uid="uid://d20fjfclvlns3"]
 
 [ext_resource type="Script" uid="uid://ll0ba0jkhv5j" path="res://levels/startgame.gd" id="1_k63ib"]
 [ext_resource type="PackedScene" uid="uid://bd7x6t7wng1a4" path="res://scenes/Ground.tscn" id="2_3jkuk"]
 [ext_resource type="PackedScene" uid="uid://bo5jo1bjcgrnj" path="res://scenes/background_2.tscn" id="2_47rlx"]
 [ext_resource type="PackedScene" uid="uid://cplivs5dyfra" path="res://scenes/Wall.tscn" id="3_47rlx"]
+[ext_resource type="Texture2D" uid="uid://b8iwuyrs1qgsv" path="res://Icons/audioOn.png" id="5_4324q"]
 [ext_resource type="PackedScene" uid="uid://dobkchjncxkrk" path="res://scenes/Orb2.tscn" id="6_pir3y"]
 [ext_resource type="PackedScene" uid="uid://4hbvck0o6edb" path="res://scenes/Orb.tscn" id="6_x5ghs"]
 [ext_resource type="PackedScene" uid="uid://bdwjo7fhxxt1m" path="res://scenes/Orb3.tscn" id="7_4324q"]
@@ -35,22 +36,28 @@ position = Vector2(10901, -200)
 [node name="UI" type="Node2D" parent="."]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="UI"]
-visible = false
 
 [node name="CenterContainer" type="CenterContainer" parent="UI/CanvasLayer2"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 150.0
-offset_bottom = 150.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -566.0
+offset_top = -11.0
+offset_right = 1319.0
+offset_bottom = 394.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.6, 0.6)
 
-[node name="ClickAnywhere" type="Button" parent="UI/CanvasLayer2/CenterContainer"]
+[node name="Volume" type="Button" parent="UI/CanvasLayer2/CenterContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_type_variation = &"FlatButton"
-theme_override_font_sizes/font_size = 50
-text = "click anywhere"
+theme_override_font_sizes/font_size = 60
+text = "Turn up the volume for the full experience"
+icon = ExtResource("5_4324q")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="UI"]
 
