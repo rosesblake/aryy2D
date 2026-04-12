@@ -68,6 +68,7 @@ shadow_offset = Vector2(2, 2)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_oq8ku")
+level_total = 11
 
 [node name="Background1" parent="." instance=ExtResource("2_mppvi")]
 position = Vector2(110, -506)
@@ -295,9 +296,6 @@ position = Vector2(4847, 426)
 [node name="SpikeFloor10" parent="." instance=ExtResource("8_gtknj")]
 position = Vector2(4889, -818)
 rotation = -1.5708
-
-[node name="SpikeFloor7" parent="." instance=ExtResource("8_gtknj")]
-position = Vector2(5053, 347)
 
 [node name="SpikeFloor9" parent="." instance=ExtResource("8_gtknj")]
 position = Vector2(4937, 49)

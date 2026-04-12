@@ -3,10 +3,12 @@ extends Node2D
 @onready var player = $Player
 @onready var restart_button = $RestartCanvas/CenterContainer/RestartButton
 
+@export var level_total := 13
+
 func _ready():
 	Game.current_level_path = scene_file_path
 	Game.reset_level_score()
-	$CanvasLayer/Label.text = "%d" % Game.total_score
+	$CanvasLayer/Label.text = "%d/%d" % [Game.level_score, level_total]
 	$Music.finished.connect(_on_music_finished)
 	$Music.play()
 
@@ -18,7 +20,7 @@ func _on_music_finished():
 	$Music.play()
 
 func _process(_delta):
-	$CanvasLayer/Label.text = "%d" % Game.total_score
+	$CanvasLayer/Label.text = "%d/%d" % [Game.level_score, level_total]
 
 func _handle_mobile_controls():
 	var is_mobile = DisplayServer.is_touchscreen_available()
@@ -41,4 +43,6 @@ func _notification(what):
 
 func _on_restart_pressed():
 	restart_button.disabled = true
-	get_tree().reload_current_scene()
+	player.respawn()
+	await get_tree().process_frame
+	restart_button.disabled = false
