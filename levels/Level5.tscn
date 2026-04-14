@@ -625,6 +625,7 @@ position = Vector2(8938, -176)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_8ln3t")
+volume_db = -10.0
 
 [node name="Mobile" type="CanvasLayer" parent="."]
 
